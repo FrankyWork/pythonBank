@@ -1,0 +1,25 @@
+{
+  "dany_python": {
+    "name": "dany",
+    "lastName": "python",
+    "login": "dany_python",
+    "password": "qweasd",
+    "balance": 9999.99
+  },
+  "alex_python": {
+    "name": "alexander",
+    "lastName": "python",
+    "login": "alex_python",
+    "password": "regregreg",
+    "balance": 777.99
+  },
+   "elena_python": {
+    "name": "elena",
+    "lastName": "python",
+    "login": "elena_python",
+    "password": "qweasd123",
+    "balance": 100
+  }
+}
+
+
