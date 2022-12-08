@@ -3,21 +3,17 @@
 import json
 
 
-def get_date(login_user, password_user):
-    with open("data_file.json", "r") as read_file:
-        data = json.load(read_file)
+def get_date(identification, authentication):
+    with open("data_file.json", "r") as authorization_date:
+        data = json.load(authorization_date)
         try:
-            if login_user == data[login_user]["login"]:
-                print("Login ACCESED")
-            else:
-                print("NOT READY")
-            if password_user == data[login_user]["password"]:
-                print("Hello", data[login_user]["name"], data[login_user]["lastName"], "!!!" "\nYour login:",
-                      data[login_user]["login"], "\nYour balance:", data[login_user]["balance"])
-            else:
-                print("NOT READY")
+            if identification == data[identification]["login"]:
+                print("Authorization successfully")
+            if authentication == data[identification]["password"]:
+                print("Hello", data[identification]["name"], data[identification]["lastName"], "!!!" "\nYour login:",
+                      data[identification]["login"], "\nYour balance:", data[identification]["balance"])
         except KeyError:
-            print("Bad try!")
+            print("Authorization failed!")
 
 
 class User:
@@ -42,4 +38,4 @@ class User:
 login = input("Login:")
 password = input("Password:")
 
-user = User("None", "None", login, password, 0)
+authorization = User("None", "None", login, password, 0)
